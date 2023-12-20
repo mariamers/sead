@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
 import "./index.css"
-import Tabelas from './Tabelas'
 function Index() {
   return (
     <>

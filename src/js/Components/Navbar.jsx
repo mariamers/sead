@@ -10,9 +10,9 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
 const navigation = [
-  { name: 'Página Inicial', href: '#', current: true },
+  { name: 'Página Inicial', href: '/sead', current: true },
   { name: 'Consultas', href: '#', current: false },
-  { name: 'Relatórios e Estatísticas', href: '/relatorios', current: false },
+  { name: 'Relatórios e Estatísticas', href: '/sead/relatorios', current: false },
   { name: 'Calendar', href: '#', current: false },
   { name: 'Reports', href: '#', current: false },
 ]

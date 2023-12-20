@@ -9,13 +9,13 @@ const App = () => {
     <Router>
       <div>
         <nav>
-          <Link to="/">Home</Link>
-          <Link to="/relatorios">Relatórios</Link>
+          <Link to="/sead">Home</Link>
+          <Link to="/sead/relatorios">Relatórios</Link>
         </nav>
 
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/relatorios" element={<Tabelas />} />
+          <Route path="/sead" element={<Index />} />
+          <Route path="/sead/relatorios" element={<Tabelas />} />
           {/* Adicione mais rotas conforme necessário para outras páginas */}
         </Routes>
       </div>

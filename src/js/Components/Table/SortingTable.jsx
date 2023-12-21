@@ -2,7 +2,6 @@ import React, { useMemo } from "react";
 import { useTable, useSortBy } from "react-table";
 import MOCKDATA from "./MOCK_DATA.json";
 import { COLUMNS } from './columns'
-import './table.css'
 
 export const SortingTable = () => {
 
@@ -26,7 +25,7 @@ export const SortingTable = () => {
 
 return (
 
-<table {...getTableProps()}>
+<table {...getTableProps()} className='bg-principal'>
 
 <thead>
     {

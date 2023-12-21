@@ -3,7 +3,7 @@ import { useTable } from "react-table";
 import MOCKDATA from "./MOCK_DATA.json";
 import { COLUMNS } from './columns'
 import{ Checkbox } from './Checkbox';
-import { ColumnFilter } from "./ColumnFilter";
+import { GlobalFilter } from "./GlobalFilter";
 export const ColumnHiding = () => {
 
     const columns = useMemo(() => COLUMNS, [])
@@ -28,9 +28,11 @@ export const ColumnHiding = () => {
 
 return (
     <>
-
-    <div className="container flex gap-3 ml-24 mb-8 flex-row flex-wrap">
-        Filtrar:
+    <main className="flex flex-col">
+    <div className="container flex gap-3 ml-24 mt-8 flex-row flex-wrap">
+        <div>
+            <h3>Filtrar: </h3>
+        </div>
         {
             allColumns.map(column => (
                 <div key={column.id}>
@@ -43,15 +45,15 @@ return (
             ))
         }
    </div>
-<div className="overflow-x">
-<table {...getTableProps()} className=" pt-6 container sm mx-auto table-auto overflow-scroll w-full">
-
-<thead className="bg-principal text-secundaria">
+<div className="container mx-24">
+<span className="float-end pb-4"><GlobalFilter /></span>
+<table {...getTableProps()} className="w-full text-sm text-left pt-6 container sm mx-auto border">
+<thead className="bg-principal text-secundaria text-xs uppercase border border-gray-900">
     {
         headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column) => (
-                    <th {...column.getHeaderProps()}>{column.render('Header')}
+                    <th {...column.getHeaderProps()} className="p-3">{column.render('Header')}
                    
                     </th>
 
@@ -61,13 +63,13 @@ return (
         ))}
    
 </thead>
-<tbody {...getTableBodyProps()}>
+<tbody {...getTableBodyProps()}  className="p-3">
     {rows.map(row => {
         prepareRow(row)
         return (
-            <tr {...row.getRowProps()} className="p-5">
+            <tr {...row.getRowProps()} className="border">
                 {row.cells.map((cell) => {
-                    return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                    return <td {...cell.getCellProps()}  className="p-2 border">{cell.render('Cell')}</td>
                 })}
             </tr>
         )
@@ -76,7 +78,7 @@ return (
 </tbody>
 </table>
 </div>
-
+</main>
 </>
 
 )

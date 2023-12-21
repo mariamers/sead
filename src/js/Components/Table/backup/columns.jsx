@@ -3,33 +3,33 @@ import { ColumnFilter } from "./ColumnFilter";
 export const COLUMNS = [
     {
         Header: 'Id',
-        accessor:'ID',
+        accessor:'id',
         Filter: ColumnFilter,
         disableFilters: true
     },
     {
         Header: 'Disciplina',
-        accessor: 'DISCIPLINA',
+        accessor: 'first_name',
         Filter: ColumnFilter
     },
     {
         Header: 'Código',
-        accessor: 'CÓDIGO',
+        accessor: 'last_name',
         Filter: ColumnFilter
     },
     {
         Header: 'Créditos',
-        accessor: 'CRÉDITOS',
+        accessor: 'email',
         Filter: ColumnFilter
     },
     {
         Header: 'Carga Horária',
-        accessor: 'EMAIL',
+        accessor: 'gender',
         Filter: ColumnFilter
     },
     {
         Header: 'Departamento',
-        accessor:'DEPARTAMENTO',
+        accessor:'dep',
         Filter: ColumnFilter
     }
 ]

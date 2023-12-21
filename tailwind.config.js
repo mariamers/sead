@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors');
+
 export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -6,9 +9,15 @@ export default {
   theme: {
     colors: {
         principal: 'rgb(0, 113, 189)',
-        secundaria: '#fff'
+        principal50:'rgba(1, 51, 84, 0.2)',
+        secundaria: '#fff',
+        gray: colors.gray
         },
-    extend: {},
+        extend: {
+          fontFamily: {
+              sans: ['Work Sans', ...defaultTheme.fontFamily.sans],
+          },
+      },
   },
   plugins: [],
 }

@@ -1,32 +1,16 @@
-import React from 'react'
-import { CSVLink } from "react-csv"
+import React, { useMemo } from 'react';
+import ExcelExport from './ExcelExport';
+import MOCKDATA from './MOCK_DATA.json';
 
 function ReactCSV() {
-    const headers = [
-        {label: "Athletic Ability", key: "playerAttributes.athletic"},
-        {label: "Name", key: "name"}
+  const data = useMemo(() => MOCKDATA, []);
 
-    ]
-
-    const data = [
-        {playerAttributes: { athletic: "Incredibly"}, name: "Lebron James"},
-        {playerAttributes: { athletic: "Not as much"}, name: "Steve Nash"},
-    ]
-
-    return (
-        <div className='ReactCSV'>
-          
-          <CSVLink
-          data={data}
-          headers={headers}
-          filename={"SOOPER_DOOPER_POOPER_SCOPPER"}
-          target="_blank"
-          >
-Baixar em CSV
-          </CSVLink>
-            
-        </div>
-    )
+  return (
+    <div className="ReactCSV">
+      {/* ... (restante do código do componente ReactCSV) */}
+      <ExcelExport data={data} filename="DadosSAG" />
+    </div>
+  );
 }
 
-export default ReactCSV
+export default ReactCSV;

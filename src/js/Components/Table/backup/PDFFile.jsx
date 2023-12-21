@@ -1,10 +1,6 @@
 import React from "react";
 import { Page, Text, Image, Document, StyleSheet } from "@react-pdf/renderer";
 import LebronStretch from "../photos/ufpb.png";
-import {Font} from '@react-pdf/renderer';
-import  TabelaDados  from "./TabelaDados";
-import  MOCKDATA  from "./MOCK_DATA.json"
-
 
 
 
@@ -53,13 +49,7 @@ const PDFFile = () => {
 
   const pageColors = ['#f6d186', '#f67280', '#c06c84'];
 
-  const dadosTabela = [
-    { ID: 1, CÓDIGO: 'Georgena', DISCIPLINA: 'Duke', EMAIL: 'gduke0@uol.com.br', CRÉDITOS: 'Female', DEPARTAMENTO: null },
-    // Adicione mais dados se necessário
-  ];
-
   const pages = [
-    
     {text: 'First page content goes here...', image: LebronStretch },
     {text: 'Second page content goes here...', image: 'https://www.si.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTcwMzExMzEwNTc0MTAxODM5/lebron-dunk.jpg' },
     {text: 'Third page content goes here...', image: 'https://s.yimg.com/ny/api/res/1.2/Aj5UoHHKnNOpdwE6Zz9GIQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MA--/https://s.yimg.com/os/creatr-uploaded-images/2023-01/b02a71d0-a774-11ed-bf7f-08714e8ad300' },
@@ -74,9 +64,10 @@ const PDFFile = () => {
           <Image style={styles.image} src={page.image} />
           <Text style={styles.text}>
           {page.text}
-         Aqui estão os dados da tabela:
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus sed magna ut pretium. Praesent vestibulum est nibh, id fringilla felis laoreet quis. Curabitur ultricies lectus elit, accumsan consectetur nisi auctor sit amet. Nullam vitae maximus lacus, non mollis ipsum. Quisque eget pretium sapien, nec lacinia elit. Nulla euismod urna quis tempus venenatis. Vivamus eu quam tristique, mattis dolor eu, porta orci. Sed imperdiet, arcu id sodales laoreet, tortor leo rutrum felis, ac porttitor erat urna sed turpis. Cras lacinia velit eget diam luctus, vulputate pellentesque leo facilisis. Praesent maximus tellus a ligula iaculis lobortis. Donec dapibus dolor ullamcorper turpis cursus, in scelerisque risus pellentesque. Fusce eget enim quis leo cursus euismod scelerisque quis odio. Aliquam sodales felis dictum, molestie ipsum quis, interdum urna. Proin a mauris condimentum enim pulvinar ullamcorper. Proin vitae tempus est.
+
+Vestibulum sodales tortor eu fermentum sodales. Vivamus ornare imperdiet lacus, eget vestibulum diam pretium vel. Nulla ut tempor augue. Cras scelerisque orci quis dignissim consectetur. Sed in sollicitu
           </Text>
-          <TabelaDados dados={dadosTabela} />
           <Text
             style={styles.pageNumber}
             render={({ pageNumber, totalPages }) =>

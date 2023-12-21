@@ -1,15 +1,22 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
 import "./index.css"
+import Breadcrumb from '../Components/Breadcrumb'
 function Index() {
   return (
     <>
     <Navbar />
-    <div className='mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8'>Links Úteis</div>
-    <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-  <div className="h-32 rounded-lg bg-gray-200 p-10">
+    <header className="bg-secundaria shadow">
+          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex items-center">
+            <h1 className="text-2xl font-bold tracking-tight text-gray-900 w-72">Página Inicial</h1>      <Breadcrumb/>
+          </div>
+        </header>
+    <main className='min-h-dvh'>
+      <div className='text-xl mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8'>Links Úteis</div>
+    <div className="container grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-1 mx-32">
+  <div className="h-32 rounded-lg p-5">
   <a href="" class="group relative block h-32 sm:h-32 lg:h-64">
-  <span class="absolute inset-0 border-2 border-dashed border-black"></span>
 
   <div
     class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
@@ -32,27 +39,26 @@ function Index() {
         />
       </svg>
 
-      <h2 class="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h2>
+      <h2 class="mt-4 text-xl font-medium sm:text-2xl">Exportar Notas</h2>
     </div>
 
     <div
       class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8"
     >
-      <h3 class="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h3>
+      <h3 class="mt-4 text-xl font-medium sm:text-2xl">Exportar Notas</h3>
 
       <p class="mt-4 text-sm sm:text-base">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, praesentium voluptatem
         omnis atque culpa repellendus.
       </p>
 
-      <p class="mt-8 font-bold">Read more</p>
+      <p class="mt-8 font-bold">Acessar</p>
     </div>
   </div>
 </a>
   </div>
-  <div class="h-32 rounded-lg bg-gray-200 p-10">
+  <div class="h-32 rounded-lg p-5">
   <a href="" class="group relative block h-32 sm:h-32 lg:h-64">
-  <span class="absolute inset-0 border-2 border-dashed border-black"></span>
 
   <div
     class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
@@ -75,27 +81,26 @@ function Index() {
         />
       </svg>
 
-      <h2 class="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h2>
+      <h2 class="mt-4 text-xl font-medium sm:text-2xl">Listagem dos alunos</h2>
     </div>
 
     <div
       class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8"
     >
-      <h3 class="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h3>
+      <h3 class="mt-4 text-xl font-medium sm:text-2xl">Listagem dos alunos</h3>
 
       <p class="mt-4 text-sm sm:text-base">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, praesentium voluptatem
         omnis atque culpa repellendus.
       </p>
 
-      <p class="mt-8 font-bold">Read more</p>
+      <p class="mt-8 font-bold">Acessar</p>
     </div>
   </div>
 </a>
   </div>
-  <div class="h-32 rounded-lg bg-gray-200 p-10">
+  <div class="h-32 rounded-lg p-5">
   <a href="" class="group relative block h-32 sm:h-32 lg:h-64">
-  <span class="absolute inset-0 border-2 border-dashed border-black"></span>
 
   <div
     class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
@@ -118,25 +123,27 @@ function Index() {
         />
       </svg>
 
-      <h2 class="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h2>
+      <h2 class="mt-4 text-xl font-medium sm:text-2xl">Tutores a distância</h2>
     </div>
 
     <div
       class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8"
     >
-      <h3 class="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h3>
+      <h3 class="mt-4 text-xl font-medium sm:text-2xl">Tutores a distância</h3>
 
       <p class="mt-4 text-sm sm:text-base">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, praesentium voluptatem
         omnis atque culpa repellendus.
       </p>
 
-      <p class="mt-8 font-bold">Read more</p>
+      <p class="mt-8 font-bold">Acessar</p>
     </div>
   </div>
 </a>
   </div>
 </div>
+</main>
+<Footer />
 </>
   )
 }

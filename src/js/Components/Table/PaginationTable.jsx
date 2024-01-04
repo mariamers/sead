@@ -1,10 +1,10 @@
 import React, { useMemo, useState } from "react";
-import { useTable } from "react-table";
+import { useTable, usePagination } from "react-table";
 import MOCKDATA from "./MOCK_DATA.json";
 import { COLUMNS } from './columns'
 import{ Checkbox } from './Checkbox';
 import { GlobalFilter } from "./GlobalFilter";
-export const ColumnHiding = () => {
+export const PaginationTable = () => {
 
     const columns = useMemo(() => COLUMNS, [])
     const data = useMemo(() => MOCKDATA, [])
@@ -14,10 +14,10 @@ export const ColumnHiding = () => {
         getTableProps,
         getTableBodyProps,
         headerGroups,
-        rows,
+        page,
+        nextPage,
+        previousPage,
         prepareRow,
-        allColumns,
-        getToggleHideAllColumnsProps
     } = useTable({
         columns,
         data,
@@ -28,11 +28,7 @@ export const ColumnHiding = () => {
 
 return (
     <>
-    <main className="flex flex-col">
-    <div className="container flex gap-3 ml-24 mt-8 flex-row flex-wrap">
-        <div>
-            <h3>Filtrar: </h3>
-        </div>
+    <main>
         {
             allColumns.map(column => (
                 <div key={column.id}>
@@ -44,7 +40,6 @@ return (
                     </div>
             ))
         }
-   </div>
 <div className="container mx-24">
 <span className="float-end pb-4"><GlobalFilter /></span>
 <table {...getTableProps()} className="w-full text-sm text-left pt-6 container sm mx-auto border">
@@ -64,7 +59,7 @@ return (
    
 </thead>
 <tbody {...getTableBodyProps()}  className="p-3">
-    {rows.map(row => {
+    {page.map(row => {
         prepareRow(row)
         return (
             <tr {...row.getRowProps()} className="border">
@@ -77,6 +72,11 @@ return (
         })}
 </tbody>
 </table>
+<div>
+    <button>anterior</button>
+    <button>próxima</button>
+
+</div>
 </div>
 </main>
 </>

@@ -10,6 +10,7 @@ import Footer from '../Components/Footer'
 import Breadcrumb from '../Components/Breadcrumb'
 import PDFFileWithTable from '../Components/Table/PDFFileWithTable'
 import { GlobalFilter} from '../Components/Table/GlobalFilter'
+import { PaginationTable } from '../Components/Table/PaginationTable'
 
 
 

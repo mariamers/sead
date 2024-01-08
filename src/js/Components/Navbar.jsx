@@ -53,8 +53,8 @@ export default function Example() {
                             href={item.href}
                             className={classNames(
                               item.current
-                                ? 'bg-principal50 text-secundaria'
-                                : 'text-secundaria hover:bg-principal50 hover:text-secundaria',
+                                ? 'bg-principalv2 text-secundaria'
+                                : 'text-secundaria hover:bg-principalv2 hover:text-secundaria',
                               'rounded-md px-3 py-2 text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
@@ -69,7 +69,7 @@ export default function Example() {
                     <div className="ml-4 flex items-center md:ml-6">
                       <button
                         type="button"
-                        className="relative rounded-full bg-principal50 p-1 text-secundaria hover:text-secundaria focus:outline-none focus:ring-2 focus:ring-secundaria focus:ring-offset-2 focus:ring-offset-gray-800"
+                        className="relative rounded-full bg-principalv2 p-1 text-secundaria hover:text-secundaria focus:outline-none focus:ring-2 focus:ring-secundaria focus:ring-offset-2 focus:ring-offset-gray-800"
                       >
                         <span className="absolute -inset-1.5" />
                         <span className="sr-only">View notifications</span>

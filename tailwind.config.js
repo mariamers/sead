@@ -9,7 +9,8 @@ export default {
   theme: {
     colors: {
         principal: 'rgb(0, 113, 189)',
-        principal50:'rgba(1, 51, 84, 0.2)',
+        principalv2:'rgba(1, 51, 84, 0.2)',
+        principalv3:'rgba(0, 113, 189, 0.1)',
         secundaria: '#fff',
         gray: colors.gray
         },

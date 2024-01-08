@@ -8,8 +8,6 @@ import './js/Pages/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Index />
-    <br/>
     <Tabelas />
   </React.StrictMode>,
 )

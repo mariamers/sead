@@ -8,6 +8,6 @@ import './js/Pages/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Tabelas />
+    <div className=' min-w-[375px]'><Tabelas /></div>
   </React.StrictMode>,
 )

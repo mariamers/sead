@@ -1,4 +1,4 @@
-import { ColumnFilter } from "./ColumnFilter";
+import ColumnFilter from "./ColumnFilter";
 
 export const COLUMNS = [
     {
@@ -8,28 +8,58 @@ export const COLUMNS = [
         disableFilters: true
     },
     {
-        Header: 'Disciplina',
-        accessor: 'DISCIPLINA',
+        Header: 'Estudante',
+        accessor: 'ESTUDANTE',
         Filter: ColumnFilter
     },
     {
         Header: 'Código',
-        accessor: 'CÓDIGO',
+        accessor: 'CODIGO',
         Filter: ColumnFilter
     },
     {
         Header: 'Créditos',
-        accessor: 'CRÉDITOS',
+        accessor: 'CREDITOS',
         Filter: ColumnFilter
     },
     {
-        Header: 'Carga Horária',
+        Header: 'Email',
         accessor: 'EMAIL',
         Filter: ColumnFilter
     },
     {
         Header: 'Departamento',
         accessor:'DEPARTAMENTO',
+        Filter: ColumnFilter
+    },
+
+    {
+        Header: 'Gênero',
+        accessor:'GENERO',
+        Filter: ColumnFilter
+    },
+
+    {
+        Header: 'Endereço',
+        accessor:'ENDERECO',
+        Filter: ColumnFilter
+    },
+
+    {
+        Header: 'Aniversário',
+        accessor:'ANIVERSARIO',
+        Filter: ColumnFilter
+    },
+
+    {
+        Header: 'Telefone',
+        accessor:'TELEFONE',
+        Filter: ColumnFilter
+    },
+
+    {
+        Header: 'Ano',
+        accessor:'ANO',
         Filter: ColumnFilter
     }
 ]

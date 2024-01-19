@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { forwardRef, useRef, useEffect } from 'react';
 
-export const Checkbox = React.forwardRef(({indeterminate, ...rest}, ref) =>{
-    const defaultRef = React.useRef()
-    const resolvedRef = ref || defaultRef
+const Checkbox = forwardRef(({ indeterminate, ...rest }, ref) => {
+  const defaultRef = useRef();
+  const resolvedRef = ref || defaultRef;
 
-    React.useEffect(() => {
-        resolvedRef.current.indeterminate = indeterminate
-    }, [resolvedRef, indeterminate])
+  useEffect(() => {
+    resolvedRef.current.indeterminate = indeterminate;
+  }, [resolvedRef, indeterminate]);
 
-    return (
-        <>
-        <input type ='checkbox' ref={resolvedRef} {...rest} />
-        </>
-    )
+  return (
+    <>
+      <input type="checkbox" ref={resolvedRef} {...rest} />
+    </>
+  )
 })
+
+export default Checkbox;

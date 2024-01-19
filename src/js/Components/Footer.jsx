@@ -5,7 +5,7 @@ const Footer = () => {
     <div>
           <br/>
 
-        <footer class="footer footer-center  w-full p-4 bg-principal text-secundaria">
+        <footer class="footer footer-center  w-full p-4 bg-principal text-white">
         <div class="text-center">
             <p>
                 Copyright © 2023 -

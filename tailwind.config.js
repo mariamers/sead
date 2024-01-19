@@ -10,9 +10,11 @@ export default {
     colors: {
         principal: 'rgb(0, 113, 189)',
         principalv2:'rgba(1, 51, 84, 0.2)',
-        principalv3:'rgba(0, 113, 189, 0.1)',
-        secundaria: '#fff',
-        gray: colors.gray
+        principalv3:'rgb(0, 113, 189)',
+        secundaria: '#684B23',
+        terciaria: '#F68121',
+        gray: colors.gray,
+        white: colors.white
         },
         extend: {
           fontFamily: {

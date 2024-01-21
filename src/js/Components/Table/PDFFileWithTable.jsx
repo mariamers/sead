@@ -1,4 +1,4 @@
-// PDFFileWithTable.jsx
+// PDFFileWithTable.js
 
 import React from 'react';
 import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
@@ -6,7 +6,7 @@ import MOCKDATA from './MOCK_DATA.json';
 
 const styles = StyleSheet.create({
   body: {
-    paddingTop: 35,
+   
     paddingBottom: 65,
     paddingHorizontal: 35,
   },
@@ -26,12 +26,10 @@ const styles = StyleSheet.create({
     color: 'grey',
   },
   table: {
-    backgroundColor: '#000000',
+    backgroundColor: 'white',
     display: 'table',
     width: 'auto',
-    borderStyle: 'solid',
-    borderColor: 'black',
-    borderWidth: 10,
+   
     borderRightWidth: 0,
     borderBottomWidth: 0,
     margin: 'auto',
@@ -42,13 +40,13 @@ const styles = StyleSheet.create({
   tableCell: {
     margin: 5,
     fontSize: 10,
-    borderStyle: 'solid',
-    borderColor: '#b2b2b2',
+   width: 70,
     borderWidth: 1,
     padding: 8,
+    textAlign: 'center'
   },
   tableHeader: {
-    backgroundColor: 'black',
+    backgroundColor: 'white',
   },
 });
 

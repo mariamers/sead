@@ -3,7 +3,7 @@ import React from 'react'
 import Navbar from '../Components/Navbar'
 import { PDFDownloadLink } from '@react-pdf/renderer'
 import PDFFile from '../Components/Table/PDFFile'
-import  ColumnHiding  from '../Components/Table/ColumnHiding'
+import  { CombinedTable }  from '../Components/Table/CombinedTable'
 import PaginationTable from '../Components/Table/PaginationTable'
 import ReactCSV from '../Components/Table/ReactCSV'
 import Footer from '../Components/Footer'
@@ -65,7 +65,7 @@ function Tabelas() {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
        
        <div className='flex gap-4 justify-center cbg flex-col m-auto items-center w-4/5'>
-        <ColumnHiding />
+        <CombinedTable />
 
   <div className='flex flex-row gap-4 m-auto'>
   <PDFDownloadLink document={<PDFFileWithTable />} filename="FORM">

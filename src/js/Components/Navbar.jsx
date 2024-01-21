@@ -101,7 +101,8 @@ export default function Example() {
                           leaveFrom="transform opacity-100 scale-100"
                           leaveTo="transform opacity-0 scale-95"
                         >
-                          <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                          <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white 
+                          py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                             {userNavigation.map((item) => (
                               <Menu.Item key={item.name}>
                                 {({ active }) => (
@@ -109,7 +110,7 @@ export default function Example() {
                                     href={item.href}
                                     className={classNames(
                                       active ? 'bg-gray-100' : '',
-                                      'block px-4 py-2 text-sm text-principalv2'
+                                      'block px-4 py-2 text-sm text-gray-500'
                                     )}
                                   >
                                     {item.name}
@@ -178,7 +179,7 @@ export default function Example() {
                         key={item.name}
                         as="a"
                         href={item.href}
-                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-principalv2 hover:text-white"
+                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-principalv2 hover:text-white"
                       >
                         {item.name}
                       </Disclosure.Button>

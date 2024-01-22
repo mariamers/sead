@@ -10,7 +10,10 @@ const Checkbox = forwardRef(({ indeterminate, ...rest }, ref) => {
 
   return (
     <>
-      <input type="checkbox" ref={resolvedRef} {...rest} />
+    <div>
+      <input type="checkbox" ref={resolvedRef} {...rest}/>
+      <span>  Alternar todos</span>
+      </div>
     </>
   )
 })

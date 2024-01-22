@@ -9,10 +9,10 @@ export default {
   theme: {
     colors: {
         principal: 'rgb(0, 113, 189)',
-        principalv2:'rgba(1, 51, 84, 0.2)',
-        principalv3:'rgb(0, 113, 189)',
         secundaria: '#684B23',
         terciaria: '#F68121',
+        cor2:'rgba(1, 51, 84, 0.2)',
+        cor3:'rgb(0, 113, 189)',
         gray: colors.gray,
         white: colors.white
         },

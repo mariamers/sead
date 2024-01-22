@@ -1,10 +1,11 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { useTable, useGlobalFilter, useFilters, useSortBy, usePagination } from "react-table";
 import MOCKDATA from "./MOCK_DATA.json";
 import { COLUMNS } from './columns'
 import { GlobalFilter } from "./GlobalFilter";
 import ColumnFilter from "./ColumnFilter";
 import Checkbox from './Checkbox';
+import { ArrowDownIcon, ArrowDownTrayIcon, ArrowTrendingUpIcon, ArrowUpCircleIcon, ArrowUpIcon, ArrowsPointingInIcon, ArrowsPointingOutIcon, BarsArrowUpIcon, ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 
 export const CombinedTable = () => {
     const columns = useMemo(() => COLUMNS, [])
@@ -48,46 +49,55 @@ export const CombinedTable = () => {
 
     const { globalFilter } = state;
     const { pageIndex } = state;
-
+    const [isOpen, SetIsOpen] = useState(false)
+    
     return (
-        <>
-            <div id="filter-selector" className="container flex flex-col items-center">
-                <div className="relative" id="DropdownButton">
-                    <button className="hover:bg-gray-50 flex items-center p-2 border-2 rounded-lg cursor-pointer text-sm border-gray-200" onClick="toggleDropdown()">
-                        Selecionar colunas
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="ml-1 
-            w-4 h-4 flex items-center">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                        </svg>
-                    </button>
-                    <div className="inline-flex flex-col bg-white py-1 border border-gray-300 shadow-md rounded-md absolute bg-gray-50 w-[30vh]">
-                        <div>
-                            <Checkbox {...getToggleHideAllColumnsProps()} />Alternar seleção
-                        </div>
-                        {allColumns.map(column => (
-                            <div key={column.id}>
-                                <label>
-                                    <input type='checkbox' {...column.getToggleHiddenProps()} />
-                                    {column.Header}
-                                </label>
+        <>         
+<div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 pt-6">
+        <div className="relative" id="DropdownButton">
+                            <button className="hover:bg-gray-100 flex items-center p-2 border-2 rounded-lg 
+                            cursor-pointer text-sm border-gray-200 active:bg-gray-100 shadow-md" onClick={() => SetIsOpen ((prev) => !prev)} >
+                               <span className="pr-2">Selecionar colunas</span> 
+                                {!isOpen ? (
+                                    <ChevronDownIcon className="h-4"/> ): (
+                                    <ChevronUpIcon className="h-4"/>                                         
+                                )}
+                            </button>
+                            {isOpen && ( 
+                            
+                            <div className="inline-flex flex-col absolute text-sm bg-white border border-gray-300 shadow-md rounded-md bg-gray-50 
+                            w-full gap-1 py-2">
+                                <div className="gap-2 flex flex-row cursor-pointer select-none hover:bg-gray-100 py-1 px-4" >
+                                    <Checkbox {...getToggleHideAllColumnsProps()} /> 
+                                </div>
+                                {allColumns.map(column => (
+                                    <div key={column.id}>
+                                        <label className="flex flex-row gap-2 cursor-pointer select-none hover:bg-gray-100 py-1 px-4">
+                                            <input type='checkbox' {...column.getToggleHiddenProps()} />
+                                            {column.Header}
+                                        </label>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
-                </div>
-                <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+                                
+                            )}
 
+                        </div>        
+                <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+</div>
                 <div className="container flex justify-center min-h-[50vh]">
                     <div className="overflow-x-scroll scroll-m-1 flex-col">
-                        <table {...getTableProps()} className="w-full text-sm text-left pt-6 container sm mx-auto border ">
+                        <table {...getTableProps()} className="w-full text-sm text-left pt-6 container sm mx-auto border">
                             <thead className="bg-principal text-white text-xs uppercase border">
                                 {headerGroups.map(headerGroup => (
-                                    <tr {...headerGroup.getHeaderGroupProps()} className=" border p-3">
+                                    <tr {...headerGroup.getHeaderGroupProps()} className=" select-none border p-3">
                                         {headerGroup.headers.map((column) => (
-                                            <th {...column.getHeaderProps(column.getSortByToggleProps())} className="p-3 p-2 border max-w-[10ch] overflow-hidden text-ellipsis whitespace-nowrap border">
-                                                {column.render('Header')}
-                                                <span>
-                                                    {column.isSorted ? (column.isSortedDesc ? ' ⇵' : ' ⇵') : ''}
+                                            <th {...column.getHeaderProps(column.getSortByToggleProps())} className="p-4 border max-w-[15ch] overflow-hidden text-ellipsis whitespace-nowrap border">
+                                                                                                <span>
+                                                    {column.isSorted ? (column.isSortedDesc ? '⇵ ' : '⇅ ') : ''}
                                                 </span>
+                                                {column.render('Header')}
+
                                             </th>
                                         ))}
                                     </tr>
@@ -109,7 +119,6 @@ export const CombinedTable = () => {
                         </table>
                     </div>
                 </div>
-            </div>
             <div className="flex flex-col items-center justify-center">
                 <div>
                     Página {'  '}
@@ -117,7 +126,7 @@ export const CombinedTable = () => {
                         {pageIndex + 1} de {pageOptions.length}
                     </strong> {' '}
                 </div>
-                <div className="flex flex-row gap-4">
+                <div className="flex flex-row gap-6">
                     <div>
                         <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}> {'<<'}</button>
                         <button onClick={() => previousPage()} disabled={!canPreviousPage}>Anterior</button>

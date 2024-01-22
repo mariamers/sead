@@ -15,7 +15,9 @@ const ExcelExport = ({ data, filename }) => {
   };
 
   return (
-    <button onClick={downloadExcel} className='hover:bg-gray-50 flex items-center justify-between px-4 py-2 border-2 rounded-lg cursor-pointer text-sm border-gray-200 group peer-checked:border-blue-500"'>Baixar como Excel</button>
+    <button onClick={downloadExcel} className='hover:bg-gray-50 flex items-center 
+    justify-between px-4 py-2 border-2 rounded-lg cursor-pointer text-sm border-gray-200 group peer-checked:border-blue-500 shadow-md active:bg-gray-100'>
+      Baixar como Excel</button>
   );
 };
 

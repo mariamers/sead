@@ -1,7 +1,6 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import Breadcrumb from './Breadcrumb'
 
 const user = {
   name: 'Tom Cook',
@@ -10,7 +9,7 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
 const navigation = [
-  { name: 'Página Inicial', href: '/sead', current: true },
+  { name: 'Página Inicial', href: '/sead', current: false },
   { name: 'Consultas', href: '#', current: false },
   { name: 'Relatórios e Estatísticas', href: '/sead/relatorios', current: false },
   { name: 'Databases e Vínculos', href: '#', current: false },
@@ -19,11 +18,6 @@ const navigation = [
 
 ]
 
-const inicial = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
-]
 
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -60,8 +54,8 @@ export default function Example() {
                             href={item.href}
                             className={classNames(
                               item.current
-                                ? 'bg-principalv2 text-white'
-                                : 'text-white hover:bg-principalv2 hover:text-white',
+                                ? 'bg-cor2 text-white'
+                                : 'text-white hover:bg-cor2 hover:text-white',
                               'rounded-md px-3 py-2 text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
@@ -76,7 +70,7 @@ export default function Example() {
                     <div className="ml-4 flex items-center md:ml-6">
                       <button
                         type="button"
-                        className="relative rounded-full bg-principalv2 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-principalv2"
+                        className="relative rounded-full bg-cor2 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cor2"
                       >
                         <span className="absolute -inset-1.5" />
                         <span className="sr-only">View notifications</span>
@@ -86,7 +80,7 @@ export default function Example() {
                       {/* Profile dropdown */}
                       <Menu as="div" className="relative ml-3">
                         <div>
-                          <Menu.Button className="relative flex max-w-xs items-center rounded-full bg-principalv2 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-principalv2">
+                          <Menu.Button className="relative flex max-w-xs items-center rounded-full bg-cor2 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cor2">
                             <span className="absolute -inset-1.5" />
                             <span className="sr-only">Open user menu</span>
                             <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
@@ -125,7 +119,7 @@ export default function Example() {
                   </div>
                   <div className="-mr-2 flex md:hidden">
                     {/* Mobile menu button */}
-                    <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md bg-principalv2 p-2 text-gray-400 hover:bg-principalv2 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-principalv2">
+                    <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md bg-cor2 p-2 text-gray-400 hover:bg-cor2 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cor2">
                       <span className="absolute -inset-0.5" />
                       <span className="sr-only">Open main menu</span>
                       {open ? (
@@ -146,7 +140,7 @@ export default function Example() {
                       as="a"
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-principalv2 text-white' : 'text-gray-300 hover:bg-principalv2 hover:text-white',
+                        item.current ? 'bg-cor2 text-white' : 'text-gray-300 hover:bg-cor2 hover:text-white',
                         'block rounded-md px-3 py-2 text-base font-medium'
                       )}
                       aria-current={item.current ? 'page' : undefined}
@@ -155,7 +149,7 @@ export default function Example() {
                     </Disclosure.Button>
                   ))}
                 </div>
-                <div className="border-t border-principalv2 pb-3 pt-4">
+                <div className="border-t border-cor2 pb-3 pt-4">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
                       <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
@@ -166,7 +160,7 @@ export default function Example() {
                     </div>
                     <button
                       type="button"
-                      className="relative ml-auto flex-shrink-0 rounded-full bg-principalv2 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-principalv2"
+                      className="relative ml-auto flex-shrink-0 rounded-full bg-cor2 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cor2"
                     >
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">View notifications</span>
@@ -179,7 +173,7 @@ export default function Example() {
                         key={item.name}
                         as="a"
                         href={item.href}
-                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-principalv2 hover:text-white"
+                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-cor2 hover:text-white"
                       >
                         {item.name}
                       </Disclosure.Button>

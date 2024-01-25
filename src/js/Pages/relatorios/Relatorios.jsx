@@ -5,31 +5,23 @@ import { PDFDownloadLink } from '@react-pdf/renderer'
 import { CombinedTable } from '../../Components/Table/CombinedTable'
 import ReactCSV from '../../Components/Table/ReactCSV'
 import Footer from '../../Components/Footer'
-import Breadcrumb from '../../Components/Breadcrumb'
 import PDFFileWithTable from '../../Components/Table/PDFFileWithTable'
 import FilterMenu from '../../Components/FilterMenu'
+import MainTitle from '../../Components/MainTitle'
 
-
-const navigation = [
-  { name: 'Página Inicial', href: '/sead', current: false },
-  { name: 'Consultas', href: '#', current: true },
-
-]
 
 function Relatorios() {
   return (
     <>
-      <Navbar />
-      
-      <header className="bg-white shadow w-full">
-        <div className="py-6 flex items-center justify-center w-10/12 align-middle m-auto flex gap-5">
-          <h1 className="text-2xl font-bold tracking-tight text-gray-900 w-full">Relatórios e estatísticas</h1>
-          <div className='w-full'><Breadcrumb /></div>
-        </div>
-      </header>
-      <div className="w-10/12 m-auto pt-6"><FilterMenu /></div>
+    <header>
+    <Navbar />
+    <MainTitle H1="Relatórios e Estatísticas"/>
+    </header>
+    <div className='text-xl mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8'>Filtrar Itens</div>
+
+      <div className="p-6"><FilterMenu /></div>
       <div className='m-auto flex flex-col'>
-        <div className='flex gap-4 justify-center cbg flex-col m-auto items-center w-4/5'>
+        <div className='flex gap-4 justify-center cbg flex-col m-auto items-center w-10/12'>
           <CombinedTable />
 
           <div className='flex flex-row gap-4 m-auto'>

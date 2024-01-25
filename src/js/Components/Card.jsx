@@ -1,8 +1,8 @@
-import { PlayCircleIcon } from '@heroicons/react/24/outline'
+import { ArrowDownCircleIcon, PlayCircleIcon } from '@heroicons/react/24/outline'
 import React from 'react'
 
-function Card ({titulo, paragrafo}) {
-    const icon = (<PlayCircleIcon />)
+function Card ({titulo, paragrafo, icon}) {
+
   return (
     <div>
         <div class="h-fit rounded-lg p-5">
@@ -14,9 +14,9 @@ function Card ({titulo, paragrafo}) {
                 <div
                   class="p-4 !pt-0 transition-opacity flex flex-col justify-end group-hover:absolute min-h-[25vh] group-hover:opacity-0 sm:p-6 lg:p-8"
                 >
-                  <img src={icon} alt="icone" />
+                  {icon}
 
-                  <h2 class="mt-4 text-xl font-medium sm:text-2xl">{titulo}</h2>
+                  <h2 class="mt-4 text-xl font-medium sm:text-2xl">{titulo ? titulo : "indefinido"}</h2>
                 </div>
 
                 <div
@@ -24,9 +24,8 @@ function Card ({titulo, paragrafo}) {
                 >
                   <h3 class="mt-4 text-xl font-medium sm:text-2xl">{titulo}</h3>
 
-                  <p class="mt-4 text-sm sm:text-base">{paragrafo ? paragrafo : "lorem ipsum dolor sit amet"}
+                  <p class="mt-4 text-sm sm:text-base">{paragrafo ? paragrafo : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugiat."}
                   </p>
-
                   <p class="mt-8 font-bold">Acessar</p>
                 </div>
               </div>

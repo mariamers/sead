@@ -3,13 +3,10 @@ import Tips from "./Tips"
 const FilterMenu = () => {
     return (
       <>
-       <div className='m-auto w-full' id='filtros'>
-    <div className='text-xl px-4 py-6 bg-gray-200 border-2 border-black flex items-center gap-2'>
 
-                  <h2>Filtrar itens</h2>            
+       <div className='m-auto w-10/12' id='filtros'>
 
-    </div>
-    <div className="container shadow py-6 flex flex-row p-6 gap-4">
+    <div className="shadow py-6 flex flex-row p-6 gap-4 border-2 border-black bg-white">
         <div className='grid grid-cols-1 gap-2'>
             <div className="col-span-1 grid grid-cols-2 gap-4">
                 <label className="input-group-text " for="inputGroupSelect01">Curso: </label>   

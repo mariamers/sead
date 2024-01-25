@@ -8,7 +8,7 @@ import Index from './js/Pages/index/Index'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className=' min-w-[375px]'>
+    <div className=' min-w-[375px] bg-gray-50'>
     <BrowserRouter>
             <Routes>
                 <Route path="/sead" element={<Index />} />

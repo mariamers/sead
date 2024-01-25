@@ -4,11 +4,11 @@ const Footer = () => {
   return (
     <>
       <div className='pt-6'>
-        <footer class="footer footer-center  w-full p-4 bg-principal text-white">
-          <div class="text-center">
+        <footer className="footer footer-center  w-full p-4 bg-principal text-white">
+          <div className="text-center">
             <p>
               Copyright © 2023 -
-              <a class="font-semibold" href="mailto:m.sohanemon@gmail.com"
+              <a className="font-semibold" href="mailto:m.sohanemon@gmail.com"
               >SEAD</a>
             </p>
           </div>

@@ -12,7 +12,7 @@ function Card ({titulo, paragrafo, icon}) {
                 className="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
               >
                 <div
-                  className="p-4 !pt-0 transition-opacity flex flex-col justify-end group-hover:absolute min-h-[25vh] group-hover:opacity-0 sm:p-6 lg:p-8"
+                  className="p-4 !pt-0 transition-opacity flex flex-col justify-end items-start group-hover:absolute min-h-[25vh] group-hover:opacity-0 sm:p-6 lg:p-8"
                 >
                   {icon}
 

@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Relatorios from './js/Pages/relatorios/Relatorios'
-import App from './App'
 import './js/Pages/index/index.css';
 import Index from './js/Pages/index/Index'
 

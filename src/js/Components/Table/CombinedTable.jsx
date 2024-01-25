@@ -5,7 +5,7 @@ import { COLUMNS } from './columns'
 import { GlobalFilter } from "./GlobalFilter";
 import ColumnFilter from "./ColumnFilter";
 import Checkbox from './Checkbox';
-import { ArrowDownIcon, ArrowDownTrayIcon, ArrowTrendingUpIcon, ArrowUpCircleIcon, ArrowUpIcon, ArrowsPointingInIcon, ArrowsPointingOutIcon, BarsArrowUpIcon, ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 
 export const CombinedTable = () => {
     const columns = useMemo(() => COLUMNS, [])

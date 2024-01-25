@@ -13,6 +13,7 @@ export default {
         terciaria: '#F68121',
         cor2:'rgba(1, 51, 84, 0.2)',
         cor3:'rgb(0, 113, 189)',
+        cor4: '#F4E9DF',
         gray: colors.gray,
         white: colors.white
         },

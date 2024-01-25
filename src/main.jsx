@@ -1,25 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Relatorios from "./js/Pages/relatorios/Relatorios.jsx";
-import Index from "./js/Pages/index/Index.jsx";
-import App from './App.jsx';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Relatorios from './js/Pages/relatorios/Relatorios'
+import App from './App'
+import './js/Pages/index/index.css';
+import Index from './js/Pages/index/Index'
 
 
-const router = createBrowserRouter([
-  {
-    path: "/sead/",
-    element: <App />,
-    children: [
-      {
-        path: "/sead/relatorios",
-        element: <Relatorios />,
-      },
 
-    ],
-  },
-]);
+
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-;
+    <div className=' min-w-[375px] bg-gray-50'>
+    <BrowserRouter>
+            <Routes>
+                <Route path="/sead" element={<Index />} />
+                <Route path="/sead/relatorios" element={<Relatorios />} />
+
+            </Routes>
+        
+        
+        </BrowserRouter></div>
+  </React.StrictMode>,
+)

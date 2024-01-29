@@ -1,0 +1,82 @@
+{
+  "hash": "f94a35fa",
+  "configHash": "45407529",
+  "lockfileHash": "f080be19",
+  "browserHash": "4f099905",
+  "optimized": {
+    "react": {
+      "src": "../../react/index.js",
+      "file": "react.js",
+      "fileHash": "d0909c87",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "0721a2ba",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../../react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "4fc4a25b",
+      "needsInterop": true
+    },
+    "@headlessui/react": {
+      "src": "../../@headlessui/react/dist/headlessui.esm.js",
+      "file": "@headlessui_react.js",
+      "fileHash": "8749b331",
+      "needsInterop": false
+    },
+    "@heroicons/react/24/outline": {
+      "src": "../../@heroicons/react/24/outline/esm/index.js",
+      "file": "@heroicons_react_24_outline.js",
+      "fileHash": "ffa1bdce",
+      "needsInterop": false
+    },
+    "@react-pdf/renderer": {
+      "src": "../../@react-pdf/renderer/lib/react-pdf.browser.es.js",
+      "file": "@react-pdf_renderer.js",
+      "fileHash": "938aea7f",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "0f87eb51",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "f7d7c893",
+      "needsInterop": false
+    },
+    "react-table": {
+      "src": "../../react-table/index.js",
+      "file": "react-table.js",
+      "fileHash": "bbe5d07d",
+      "needsInterop": true
+    },
+    "xlsx": {
+      "src": "../../xlsx/xlsx.mjs",
+      "file": "xlsx.js",
+      "fileHash": "5f9edf91",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-YFKKR4WC": {
+      "file": "chunk-YFKKR4WC.js"
+    },
+    "chunk-D35U76OX": {
+      "file": "chunk-D35U76OX.js"
+    },
+    "chunk-G45OTSVE": {
+      "file": "chunk-G45OTSVE.js"
+    },
+    "chunk-3EJPJMEH": {
+      "file": "chunk-3EJPJMEH.js"
+    }
+  }
+}

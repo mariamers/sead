@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/sead/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAG - SEAD</title>
+    <script type="module" crossorigin src="/sead/assets/index-goWEDMdt.js"></script>
+    <link rel="stylesheet" crossorigin href="/sead/assets/index-_3_vhmiL.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

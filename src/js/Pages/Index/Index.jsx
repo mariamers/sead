@@ -2,7 +2,10 @@ import React from 'react'
 import Navbar from '../../Components/Navbar'
 import Footer from '../../Components/Footer'
 import "./index.css"
-
+import Card from '../../Components/Card'
+import MainTitle from '../../Components/MainTitle'
+import { ArrowDownOnSquareIcon, CubeIcon, ListBulletIcon, PlayCircleIcon } from '@heroicons/react/24/outline'
+import Relatorios from '../relatorios/Relatorios'
 function Index() {
   const i01 = <ArrowDownOnSquareIcon className='h-12 flex' />
   const i02 = <ListBulletIcon className='h-12 flex' />

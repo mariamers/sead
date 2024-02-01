@@ -6,6 +6,7 @@ import Card from '../../Components/Card'
 import MainTitle from '../../Components/MainTitle'
 import { ArrowDownOnSquareIcon, CubeIcon, ListBulletIcon, PlayCircleIcon } from '@heroicons/react/24/outline'
 import Relatorios from '../relatorios/Relatorios'
+import Breadcrumb from '../../Components/Breadcrumb'
 function Index() {
   const i01 = <ArrowDownOnSquareIcon className='h-12 flex' />
   const i02 = <ListBulletIcon className='h-12 flex' />
@@ -35,8 +36,8 @@ function Index() {
       <Footer />
 
 <br/>
-      <Relatorios />
 
+<Relatorios />
     </>
   )
 }

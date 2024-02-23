@@ -7,6 +7,7 @@ import ColumnFilter from "./ColumnFilter";
 import Checkbox from './Checkbox';
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import Button from '../Button';
+import Tips from '../Tips';
 
 export const CombinedTable = () => {
     const columns = useMemo(() => COLUMNS, [])
@@ -54,6 +55,7 @@ export const CombinedTable = () => {
 
     return (
         <>
+        {/* INÍCIO Cabeçalho da tabela (selecionar colunas e pesquisa)*/}
             <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 pt-6">
                 <div className="relative" id="DropdownButton">
                     <div className="pr-2 " onClick={() => SetIsOpen((prev) => !prev)}>
@@ -84,8 +86,12 @@ export const CombinedTable = () => {
                     )}
 
                 </div>
-                <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+                <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} /> <Tips/>
             </div>
+        {/* FIM Cabeçalho da tabela*/}
+
+        {/* INÍCIO tabela*/}
+
             <div className="w-full flex justify-center min-h-[50vh]">
                 <div className="overflow-x-scroll scroll-m-1 flex-col rounded-2xl shadow-md ">
                     <table {...getTableProps()} className="w-full text-left pt-6 container sm mx-auto border ">
@@ -120,24 +126,32 @@ export const CombinedTable = () => {
                     </table>
                 </div>
             </div>
+        {/* FIM tabela*/}
+
+        {/* INÍCIO Paginação*/}
             <div className="flex flex-col items-center justify-center">
-                <div>
-                    Página {'  '}
-                    <strong>
-                        {pageIndex + 1} de {pageOptions.length}
-                    </strong> {' '}
-                </div>
+                
                 <div className="flex flex-row gap-6">
                     <div>
-                        <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}> {'<<'}</button>
-                        <button onClick={() => previousPage()} disabled={!canPreviousPage}>Anterior</button>
+                        <button onClick={() => gotoPage(0)} disabled={!canPreviousPage} className="cursor-pointer rounded-full border-2 flex items-center justify-center 
+                        w-10 h-10 text-gray-600 transition-colors duration-150 rounded-full focus:shadow-outline hover:bg-gray-100"> <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" fill-rule="evenodd"></path></svg></button>
+                        <button onClick={() => previousPage()} disabled={!canPreviousPage}> </button>
                     </div>
+                    <button class="w-10 h-10 text-gray-600 transition-colors duration-150 rounded-full border-2 focus:shadow-outline focus:bg-secundaria  hover:bg-gray-100" button onClick={() => gotoPage(0)}>{1}</button>
+                    <button class="w-10 h-10 text-gray-600 transition-colors duration-150 rounded-full border-2 focus:shadow-outline focus:bg-secundaria hover:bg-gray-100" button onClick={() => gotoPage(1)}>{2}</button>
+
                     <div>
-                        <button onClick={() => nextPage()} disabled={!canNextPage}>Próxima</button>
-                        <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}> {'>>'}</button>
+                        <button onClick={() => nextPage()} disabled={!canNextPage} className="cursor-pointer rounded-full border-2 flex items-center justify-center 
+                        w-10 h-10 text-gray-600 transition-colors duration-150 rounded-full focus:shadow-outline hover:bg-gray-100">
+                             <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+
+                        </button>
+                        <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage} ></button>
                     </div>
                 </div>
             </div>
+        {/* FIM Paginação*/}
+
         </>
     );
 };

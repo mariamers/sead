@@ -6,7 +6,6 @@ import Card from '../../Components/Card'
 import MainTitle from '../../Components/MainTitle'
 import { ArrowDownOnSquareIcon, CubeIcon, ListBulletIcon, PlayCircleIcon } from '@heroicons/react/24/outline'
 import Relatorios from '../relatorios/Relatorios'
-import Breadcrumb from '../../Components/Breadcrumb'
 function Index() {
   const i01 = <ArrowDownOnSquareIcon className='h-12 flex' />
   const i02 = <ListBulletIcon className='h-12 flex' />
@@ -17,9 +16,7 @@ function Index() {
     <>
     <header>
     <Navbar />
-    <MainTitle H1="Página Inicial">
-      <Breadcrumb Link1="home" />
-    </MainTitle>    
+    <MainTitle H1="Página Inicial"/>
     </header>
 
       <main className='min-h-dvh'>

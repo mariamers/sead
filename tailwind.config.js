@@ -9,13 +9,25 @@ export default {
   theme: {
     colors: {
         principal: 'rgb(0, 113, 189)',
-        secundaria: '#684B23',
+        secundaria: 'rgba(1, 51, 84, 0.2)',
         terciaria: '#F68121',
         cor2:'rgba(1, 51, 84, 0.2)',
         cor3:'rgb(0, 113, 189)',
         cor4: '#F4E9DF',
         gray: colors.gray,
         white: colors.white
+        },
+        screens: {
+          'sm': '400px',
+          // => @media (min-width: 640px) { ... }
+    
+          'md': '740px',
+          // => @media (min-width: 768px) { ... }
+    
+          'lg': '1260px',
+          // => @media (min-width: 1024px) { ... }
+    
+          'xl': '1400px',
         },
         extend: {
           fontFamily: {

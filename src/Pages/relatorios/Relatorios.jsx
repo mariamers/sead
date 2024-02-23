@@ -9,6 +9,7 @@ import PDFFileWithTable from '../../Components/Table/PDFFileWithTable'
 import FilterMenu from '../../Components/FilterMenu'
 import MainTitle from '../../Components/MainTitle'
 import Button from '../../Components/Button'
+import Breadcrumb from '../../Components/Breadcrumb'
 
 
 
@@ -17,7 +18,9 @@ function Relatorios() {
     <>
     <header>
     <Navbar />
-    <MainTitle H1="Relatórios e Estatísticas"/>
+    <MainTitle H1="Relatórios e Estatísticas">
+    <Breadcrumb Link1="Home" Link2="Relatórios e estatísticas" Link3="Filtrar itens"/>
+    </MainTitle>
     </header>
     <div className='text-xl mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8'>Filtrar Itens</div>
 

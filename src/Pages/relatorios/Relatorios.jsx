@@ -18,9 +18,8 @@ function Relatorios() {
     <>
     <header>
     <Navbar />
-    <MainTitle H1="Relatórios e Estatísticas">
-    <Breadcrumb Link1="Home" Link2="Relatórios e estatísticas" Link3="Filtrar itens"/>
-    </MainTitle>
+    <MainTitle H1="Relatórios e Estatísticas"/>
+    <Breadcrumb Breadcrumb1="Home"/>
     </header>
     <div className='text-xl mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8'>Filtrar Itens</div>
 

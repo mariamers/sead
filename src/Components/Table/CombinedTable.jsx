@@ -134,16 +134,16 @@ export const CombinedTable = () => {
                 <div className="flex flex-row gap-6">
                     <div>
                         <button onClick={() => gotoPage(0)} disabled={!canPreviousPage} className="cursor-pointer rounded-full border-2 flex items-center justify-center 
-                        w-10 h-10 text-gray-600 transition-colors duration-150 rounded-full focus:shadow-outline hover:bg-gray-100"> <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" fill-rule="evenodd"></path></svg></button>
+                        w-10 h-10 text-gray-600 transition-colors duration-150 rounded-full focus:shadow-outline hover:bg-gray-100"> <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" fill-rule="evenodd"></path></svg></button>
                         <button onClick={() => previousPage()} disabled={!canPreviousPage}> </button>
                     </div>
-                    <button class="w-10 h-10 text-gray-600 transition-colors duration-150 rounded-full border-2 focus:shadow-outline focus:bg-secundaria  hover:bg-gray-100" button onClick={() => gotoPage(0)}>{1}</button>
-                    <button class="w-10 h-10 text-gray-600 transition-colors duration-150 rounded-full border-2 focus:shadow-outline focus:bg-secundaria hover:bg-gray-100" button onClick={() => gotoPage(1)}>{2}</button>
+                    <button className="w-10 h-10 text-gray-600 transition-colors duration-150 rounded-full border-2 focus:shadow-outline focus:bg-secundaria  hover:bg-gray-100" button onClick={() => gotoPage(0)}>{1}</button>
+                    <button className="w-10 h-10 text-gray-600 transition-colors duration-150 rounded-full border-2 focus:shadow-outline focus:bg-secundaria hover:bg-gray-100" button onClick={() => gotoPage(1)}>{2}</button>
 
                     <div>
                         <button onClick={() => nextPage()} disabled={!canNextPage} className="cursor-pointer rounded-full border-2 flex items-center justify-center 
                         w-10 h-10 text-gray-600 transition-colors duration-150 rounded-full focus:shadow-outline hover:bg-gray-100">
-                             <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                             <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
 
                         </button>
                         <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage} ></button>

@@ -17,18 +17,7 @@ export default {
         gray: colors.gray,
         white: colors.white
         },
-        screens: {
-          'sm': '400px',
-          // => @media (min-width: 640px) { ... }
-    
-          'md': '740px',
-          // => @media (min-width: 768px) { ... }
-    
-          'lg': '1260px',
-          // => @media (min-width: 1024px) { ... }
-    
-          'xl': '1400px',
-        },
+
         extend: {
           fontFamily: {
               sans: ['Work Sans', ...defaultTheme.fontFamily.sans],

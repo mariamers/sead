@@ -7,7 +7,6 @@ function ReactCSV() {
 
   return (
     <div className="ReactCSV">
-      {/* ... (restante do código do componente ReactCSV) */}
       <ExcelExport data={data} filename="DadosSAG" />
     </div>
   );

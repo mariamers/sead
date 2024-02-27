@@ -23,8 +23,8 @@ function Index() {
     </header>
 
       <main className='min-h-dvh'>
-        <div className='text-xl mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8'>Links Úteis</div>
-        <div className="grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-1 lg:mx-32 w-auto min-w-[250px] m-auto">
+        <div className='text-xl mx-auto w-10/12 pt-12 px-6'>Links Úteis</div>
+        <div className="grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-1 lg:mx-32 w-10/12 min-w-[250px] m-auto">
           <Card titulo="Exportar notas" icon={i01}/>
           <Card titulo="Listagem de alunos" icon={i02}/>
           <Card titulo="Tutores a distância" icon={i03}/>

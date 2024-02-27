@@ -21,6 +21,7 @@
     "react-csv": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.3",
+    "react-sticky-table": "^5.1.11",
     "react-table": "^7.8.0",
     "xlsx": "^0.18.5"
   },

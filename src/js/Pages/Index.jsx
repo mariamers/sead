@@ -1,12 +1,11 @@
 import React from 'react'
-import Navbar from '../../Components/Navbar'
-import Footer from '../../Components/Footer'
-import "./index.css"
-import Card from '../../Components/Card'
-import MainTitle from '../../Components/MainTitle'
-import { ArrowDownOnSquareIcon, CubeIcon, ListBulletIcon, PlayCircleIcon } from '@heroicons/react/24/outline'
-import Relatorios from '../relatorios/Relatorios'
-import Breadcrumb from '../../Components/Breadcrumb'
+import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
+import Card from '../Components/Card'
+
+import MainTitle from '../Components/MainTitle'
+import { ArrowDownOnSquareIcon, CubeIcon, ListBulletIcon, } from '@heroicons/react/24/outline'
+import Breadcrumb from '../Components/Breadcrumb'
 function Index() {
   const i01 = <ArrowDownOnSquareIcon className='h-12 flex' />
   const i02 = <ListBulletIcon className='h-12 flex' />
@@ -31,15 +30,9 @@ function Index() {
           <Card titulo="Tutores presenciais" icon={i03}/>
           <Card titulo="Estimativas" icon={i03}/>
           <Card titulo="Gerar turmas" icon={i03}/>
-
         </div>
-
       </main>
       <Footer />
-
-<br/>
-
-<Relatorios />
     </>
   )
 }

@@ -8,3 +8,7 @@
         @apply max-w-[15ch] overflow-hidden text-ellipsis whitespace-nowrap;
       }
 }
+
+body {
+  min-width: 410px;
+}

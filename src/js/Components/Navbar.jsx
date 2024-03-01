@@ -6,13 +6,13 @@ import NavbarUser from "./NavbarUser";
 const navigation = [
     {
         name: "Página Inicial",
-        href: "/sead",
+        href: "/",
         current: false,
     },
 
     {
         name: "Consultas",
-        href: "/sead/consultas",
+        href: "/consultas",
         current: false,
         dropdownOptions: [
             { name: "Opção A", href: "#" },
@@ -22,12 +22,12 @@ const navigation = [
     },
     {
         name: "Relatórios e Estatísticas",
-        href: "/sead/relatorios",
+        href: "/relatorios",
         current: false,
     },
     {
         name: "Databases e Vínculos",
-        href: "/sead/databases",
+        href: "/databases",
         current: false,
         dropdownOptions: [
             { name: "Opção 1", href: "#" },
@@ -37,7 +37,7 @@ const navigation = [
     },
     {
         name: "Pagamentos",
-        href: "/sead/pagamentos",
+        href: "/pagamentos",
         current: false,
         dropdownOptions: [
             { name: "Opção 1", href: "#" },
@@ -47,7 +47,7 @@ const navigation = [
     },
     {
         name: "Funções Internas",
-        href: "/sead/interno",
+        href: "/interno",
         current: false,
         dropdownOptions: [
             { name: "Opção 1", href: "#" },
@@ -87,21 +87,16 @@ export default function Example() {
                                                 {navigation.map((item) => (
                                                     <Fragment key={item.name}>
                                                         {item.dropdownOptions ? (
-                                                            // Botão com dropdown para os itens que possuem dropdownOptions
                                                             <Menu as="div" className="relative">
                                                                 <Menu.Button
                                                                     onClick={() => {
                                                                         setOpenDropdown(
-                                                                            openDropdown === item.name
-                                                                                ? null
-                                                                                : item.name
-                                                                        ); // Abrir ou fechar o dropdown
+                                                                            openDropdown === item.name ? null : item.name );
                                                                     }}
                                                                     className={classNames(
-                                                                        openDropdown === item.name
-                                                                            ? "bg-cor2 text-gray-100"
+                                                                        openDropdown === item.name ? "bg-cor2 text-gray-100"
                                                                             : "text-gray-100 hover:bg-cor2 hover:text-gray-100",
-                                                                        "rounded-lg px-3 flex gap-2 py-2 text-sm font-medium"
+                                                                        "rounded-lg px-3 flex gap-2 py-2 text-sm font-medium items-center"
                                                                     )}
                                                                 >
                                                                     {item.name}
@@ -112,7 +107,7 @@ export default function Example() {
                                                                 </Menu.Button>
 
                                                                 <Transition
-                                                                    show={openDropdown === item.name} // Mostrar o dropdown se estiver aberto
+                                                                    show={openDropdown === item.name}
                                                                     as={Fragment}
                                                                     enter="transition ease-out duration-100"
                                                                     enterFrom="transform opacity-0 scale-95"
@@ -147,7 +142,7 @@ export default function Example() {
                                                                 className={classNames(
                                                                     item.current
                                                                         ? "bg-cor2 text-gray-100"
-                                                                        : "text-gray-100 hover:bg-cor2 hover:text-gray-100",
+                                                                        : "text-gray-100 hover:bg-cor2  selection:bg-secundaria hover:text-gray-100",
                                                                     "rounded-lg px-3 py-2 text-sm font-medium"
                                                                 )}
                                                                 aria-current={item.current ? "page" : undefined}

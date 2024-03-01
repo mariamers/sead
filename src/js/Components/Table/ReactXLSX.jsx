@@ -2,14 +2,14 @@ import React, { useMemo } from 'react';
 import ExcelExport from './ExcelExport';
 import MOCKDATA from './MOCK_DATA.json';
 
-function ReactCSV() {
+function ReactXLSX() {
   const data = useMemo(() => MOCKDATA, []);
 
   return (
-    <div className="ReactCSV">
+    <div>
       <ExcelExport data={data} filename="DadosSAG" />
     </div>
   );
 }
 
-export default ReactCSV;
+export default ReactXLSX;

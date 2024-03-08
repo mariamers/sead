@@ -1,18 +1,18 @@
 import { Fragment, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import NavbarUser from "./NavbarUser";
 
 const navigation = [
     {
         name: "Página Inicial",
-        href: "/",
+        href: "/sead",
         current: false,
     },
 
     {
         name: "Consultas",
-        href: "/consultas",
+        href: "/sead/consultas",
         current: false,
         dropdownOptions: [
             { name: "Opção A", href: "#" },
@@ -22,12 +22,12 @@ const navigation = [
     },
     {
         name: "Relatórios e Estatísticas",
-        href: "/relatorios",
+        href: "/sead/relatorios",
         current: false,
     },
     {
         name: "Databases e Vínculos",
-        href: "/databases",
+        href: "/sead/databases",
         current: false,
         dropdownOptions: [
             { name: "Opção 1", href: "#" },
@@ -62,8 +62,8 @@ function classNames(...classes) {
 }
 
 export default function Example() {
-    const [openDropdown, setOpenDropdown] = useState(null); // Estado para controlar qual dropdown está aberto
-    const [openDropdownMobile, setOpenDropdownMobile] = useState(null); // Estado para controlar qual dropdown está aberto no menu móvel
+    const [openDropdown, setOpenDropdown] = useState(null); 
+    const [openDropdownMobile, setOpenDropdownMobile] = useState(null); 
 
     return (
         <>
@@ -116,7 +116,7 @@ export default function Example() {
                                                                     leaveFrom="transform opacity-100 scale-100"
                                                                     leaveTo="transform opacity-0 scale-95"
                                                                 >
-                                                                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right bg-gray-100 py-1 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                                                    <Menu.Items className="absolute left-0 z-10 mt-2 w-48 origin-top-left bg-gray-100 py-1 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                                                         {item.dropdownOptions.map((option) => (
                                                                             <Menu.Item key={option.name}>
                                                                                 {({ active }) => (
@@ -124,7 +124,7 @@ export default function Example() {
                                                                                         href={option.href}
                                                                                         className={classNames(
                                                                                             active ? "bg-gray-100" : "",
-                                                                                            "block px-4 py-2 text-sm text-gray-500"
+                                                                                            "block px-4 py-2 text-sm text-gray-500 hover:bg-gray-200"
                                                                                         )}
                                                                                     >
                                                                                         {option.name}

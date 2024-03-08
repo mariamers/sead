@@ -16,9 +16,7 @@ function Relatorios() {
       <header>
         <Navbar />
         <MainTitle H1="Relatórios e Estatísticas">
-          <div className='w-3/5'>
-        <Breadcrumb Link1="Página Inicial" Link2="Relatorios e Estatísticas" Link3="Filtrar Estatísticas" />
-        </div>
+        <Breadcrumb Link1="home" />
         </MainTitle>
 
       </header>

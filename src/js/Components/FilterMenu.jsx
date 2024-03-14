@@ -1,8 +1,65 @@
-import { Situacao, SituacaoDropdown } from './Situacao';
 import Button from "./Button"
-import CheckboxButton from "./CheckboxButton"
 import React from "react";
 import { Dados, DadosDropdown } from './Dados';
+
+const Situacao = [
+    {
+      name: "Ativo",
+      current: false,
+    },
+    {
+      name: "Concluinte",
+      current: false,
+    },
+    {
+      name: "Formando",
+      current: false,
+    },
+    {
+      name: "Concluído",
+      current: false,
+    },
+    {
+      name: "Cancelado",
+      current: false,
+    },
+    {
+      name: "Não cadastrado",
+      current: false,
+    },
+    {
+      name: "Cadastrado",
+      current: false,
+    },
+    {
+      name: "Trancado",
+      current: false,
+    },
+  ];
+
+  const Endereco = [
+    {
+      name: "Pessoais",
+      current: false,
+    },
+    {
+      name: "Contato",
+      current: false,
+    },
+    {
+      name: "Forma de ingresso",
+      current: false,
+    },
+    {
+      name: "Período de Ingresso",
+      current: false,
+    },
+    {
+      name: "Última movimentação",
+      current: false,
+    },
+    
+  ];
 
 
 const FilterMenu = () => {
@@ -41,14 +98,14 @@ const FilterMenu = () => {
             </div>
             <div className="flex gap-2 flex-col flex-wrap pb-6">
                <div> Situação:</div>
-               <div className='md:hidden'><SituacaoDropdown /></div>
-               <div className='hidden md:block'><Situacao /></div>
+               <div className='md:hidden'><DadosDropdown nenuItems={Situacao} /></div>
+               <div className='hidden md:block'><Dados menuItems={Situacao}/></div>
 
             </div>
             <div className="flex gap-2 flex-col flex-wrap">
                <div> Obter dados:</div>
-                <div className='md:hidden'><DadosDropdown /></div>
-               <div className='hidden md:block'><Dados /></div>
+                <div className='md:hidden'><DadosDropdown menuItems={Endereco}/></div>
+               <div className='hidden md:block'><Dados menuItems={Endereco}/></div>
             </div>
         <div className=" align-middle justify-center flex pt-6 ">
             <Button color='bg-terciaria bg-opacity-90 active:bg-opacity-70 border-none hover:bg-opacity-100 text-white'> Filtrar

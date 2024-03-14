@@ -68,13 +68,13 @@ export default function Example() {
     return (
         <>
             <div className="min-h-full">
-                <Disclosure as="nav" className="bg-principal">
+                <Disclosure as="nav" className="bg-principal shadow-md">
                     {({ open }) => (
                         <>
                             <div className="mx-auto w-11/12 px-4 sm:px-6 lg:px-8 min-h-16 py-2 justify-center flex flex-wrap">
                                 <div className="flex items-center ">
                                     <div className="flex items-center flex-col lg:flex-row flex-nowrap justify:center ">
-                                        <div className="flex-shrink-0">
+                                        <div className="flex-shrink-0 hidden lg:flex">
                                             <img
                                                 className="h-8 w-8"
                                                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
@@ -155,11 +155,13 @@ export default function Example() {
                                             </div>
                                         </div>
                                     </div>
+                                    
                                     <div className="hidden lg:block">
+                                        
                                         <NavbarUser />
                                     </div>
                                 </div>
-                                <div className="-mr-2 flex lg:hidden flex-row w-full justify-between flex-wrap">
+                                <div className="-mr-2 flex lg:hidden flex-row w-full justify-between items-center flex-wrap">
                                     {/* Mobile menu button */}
                                     <Disclosure.Button className="relative m-1 inline-flex items-center justify-center rounded-lg bg-secundaria p-2 text-gray-50 hover:bg-gray-700 hover:bg-opacity-40 hover:text-gray-50 focus:outline-none focus:ring-2 focus:ring-secundaria focus:ring-offset-2 focus:ring-offset-gray-100">
                                         <span className="absolute -inset-0.5" />
@@ -170,14 +172,22 @@ export default function Example() {
                                             <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                                         )}
                                     </Disclosure.Button>
+                                    <div className="flex-shrink-0">
+                                            <img
+                                                className="h-8 w-8"
+                                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                                                alt="Your Company"
+                                            />
+                                        </div>
                                     <div className="lg:hidden flex items-center">
+                                        
                                         <NavbarUser />
                                     </div>
                                 </div>
                             </div>
 
                             <Disclosure.Panel className="lg:hidden">
-                                <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+                                <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3 h-svh">
                                     {navigation.map((item) => (
                                         <Fragment key={item.name}>
                                             {item.dropdownOptions ? (

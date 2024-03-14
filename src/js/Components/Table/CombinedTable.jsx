@@ -130,10 +130,10 @@ const CombinedTable = () => {
                     >
                         <thead
                             className="bg-principal text-white border cursor-pointer"
-                            onClick={toggleExtraTags}
                         >
                             {headerGroups.map((headerGroup) => (
-                                <tr
+                                <tr                             onClick={toggleExtraTags}
+
                                     {...headerGroup.getHeaderGroupProps()}
                                     className="select-none border p-3"
                                 >
@@ -209,12 +209,14 @@ const CombinedTable = () => {
                     </table>
                 </div>
             </div>
+            {/* INICIO PAGINACAO */}
 
             <div className="flex flex-col items-center justify-center">
                 <div className="flex flex-row gap-6">
                     <div>
+
                         <button
-                            onClick={() => gotoPage(0)}
+                            onClick={() => gotoPage(state.pageIndex - 1)}
                             disabled={!canPreviousPage}
                             className="cursor-pointer rounded-full border-2 flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 focus:shadow-outline hover:bg-gray-100"
                         >
@@ -224,8 +226,8 @@ const CombinedTable = () => {
                             >
                                 <path
                                     d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                                    clip-rule="evenodd"
-                                    fill-rule="evenodd"
+                                    clipRule="evenodd"
+                                    fillRule="evenodd"
                                 ></path>
                             </svg>
                         </button>
@@ -234,20 +236,27 @@ const CombinedTable = () => {
                             disabled={!canPreviousPage}
                         ></button>
                     </div>
-                    <button
-                        className="w-10 h-10 text-gray-600 transition-colors duration-150 rounded-full border-2 focus:shadow-outline focus:bg-secundaria  hover:bg-gray-100"
-                        button
-                        onClick={() => gotoPage(0)}
-                    >
-                        {1}
-                    </button>
-                    <button
-                        className="w-10 h-10 text-gray-600 transition-colors duration-150 rounded-full border-2 focus:shadow-outline focus:bg-secundaria hover:bg-gray-100"
-                        button
-                        onClick={() => gotoPage(1)}
-                    >
-                        {2}
-                    </button>
+                    {Array.from({ length: Math.min(3, pageCount) }).map(
+                        (_, i) => {
+                            const pageIndex = Math.min(
+                                Math.max(0, state.pageIndex - 1) + i,
+                                pageCount - 1
+                            );
+                            return (
+                                <button
+                                    key={pageIndex}
+                                    onClick={() => gotoPage(pageIndex)}
+                                    className={`w-10 h-10 text-gray-600 transition-colors duration-150 rounded-full border-2 focus:shadow-outline focus:bg-secundaria hover:bg-gray-100 ${
+                                        pageIndex === state.pageIndex
+                                            ? "bg-secundaria text-gray font-semibold "
+                                            : ""
+                                    }`}
+                                >
+                                    {pageIndex + 1}
+                                </button>
+                            );
+                        }
+                    )}
                     <div>
                         <button
                             onClick={() => nextPage()}
@@ -260,8 +269,8 @@ const CombinedTable = () => {
                             >
                                 <path
                                     d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                    clip-rule="evenodd"
-                                    fill-rule="evenodd"
+                                    clipRule="evenodd"
+                                    fillRule="evenodd"
                                 ></path>
                             </svg>
                         </button>

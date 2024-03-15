@@ -96,16 +96,16 @@ const FilterMenu = () => {
                 </select>
             </div>
             </div>
-            <div className="flex gap-2 flex-col flex-wrap pb-6">
+            <div className="flex gap-2 flex-col relative flex-wrap pb-6">
                <div> Situação:</div>
-               <div className='md:hidden'><DadosDropdown nenuItems={Situacao} /></div>
-               <div className='hidden md:block'><Dados menuItems={Situacao}/></div>
+               <div className='md:hidden'><DadosDropdown menuItems={Situacao}/></div>
+               <div className='hidden md:flex'><Dados menuItems={Situacao}/></div>
 
             </div>
             <div className="flex gap-2 flex-col flex-wrap">
                <div> Obter dados:</div>
                 <div className='md:hidden'><DadosDropdown menuItems={Endereco}/></div>
-               <div className='hidden md:block'><Dados menuItems={Endereco}/></div>
+               <div className='hidden md:flex'><Dados menuItems={Endereco}/></div>
             </div>
         <div className=" align-middle justify-center flex pt-6 ">
             <Button color='bg-terciaria bg-opacity-90 active:bg-opacity-70 border-none hover:bg-opacity-100 text-white'> Filtrar
